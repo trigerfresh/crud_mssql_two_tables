@@ -84,9 +84,9 @@ const editUser = async (req, res) => {
       name: req.body.name,
       email: req.body.email,
 
-      image1: req.files?.image1?.[0]?.filename || '',
+      image1: req.files?.image1?.[0]?.filename || req.body.oldImage1 || '',
 
-      image2: req.files?.image2?.[0]?.filename || '',
+      image2: req.files?.image2?.[0]?.filename || req.body.oldImage2 || '',
 
       designation: req.body.designation,
       address: req.body.address,
